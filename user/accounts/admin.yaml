@@ -1,0 +1,11 @@
+state: enabled
+email: sga.tjhsst@gmail.com
+title: Administrator
+fullname: Admin
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$nTl9s05CrhDNCSS/HzbWM.7N5BmriPjd0SCWk/CVVp9/m/0Z24YHC

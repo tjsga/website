@@ -1,0 +1,32 @@
+name: SGA
+slug: sga
+type: theme
+version: 2.0.0
+description: Theme for TJHSST's SGA website
+icon: rebel
+author:
+  name: Akash Bhave
+  email: 2021abhave@tjhsst.edu
+homepage: https://github.com/tjsga/website
+demo: http://sga.tjhsst.edu
+keywords: grav, theme, tjhsst
+bugs: https://github.com/tjsga/website/issues
+readme: https://github.com/tjsga/website/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: ">=1.6.0" }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+      type: toggle
+      label: Dropdown in Menu
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
