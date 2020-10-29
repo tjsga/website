@@ -1,64 +1,65 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
-<head>
-{% block head %}
-    <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+	<head>
+		{% block head %}
+			<meta charset="utf-8"/>
+			<title>
+				{% if header.title %}
+					{{ header.title|e('html') }}
+					|
+				{% endif %}
+				{{ site.title|e('html') }}</title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include 'partials/metadata.html.twig' %}
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			{% include 'partials/metadata.html.twig' %}
 
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
-{% endblock head %}
+			<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}"/>
+			<link rel="canonical" href="{{ page.url(true, true) }}"/>
+		{% endblock head %}
 
-{% block stylesheets %}
-    {% do assets.addCss('theme://css/custom.css', 98) %}
-{% endblock %}
+		{% block stylesheets %}
+			{% do assets.addCss('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css', 98) %}
+			{% do assets.addCss('theme://css/style.css', 98) %}
+			{% do assets.addCss('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap', 97) %}
+		{% endblock %}
 
-{% block assets deferred %}
-    {{ assets.css()|raw }}
-{% endblock %}
-</head>
-<body id="top" class="{{ page.header.body_classes }}">
+		{% block javascripts %}
+			{% do assets.addJs('https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js', 100) %}
+		{% endblock %}
 
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ home_url }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %}
-        </div>
-    </div>
-{% endblock %}
+		{% block assets deferred %}
+			{{ assets.css()|raw }}
+			{{ assets.js()|raw }}
+		{% endblock %}
+	</head>
 
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
-        {% block content %}{% endblock %}
-        </div>
-    </section>
-{% endblock %}
+	<body id="top" class="{{ page.header.body_classes }} bg-light text-dark">
 
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-        </div>
-    </div>
-{% endblock %}
+		{% block header %}
+			<div class="header">
+				<div>
+					{% block header_navigation %}
+						<nav class="nav header">
+							{% include 'partials/navigation.html.twig' %}
+						</nav>
+					{% endblock %}
+				</div>
+			</div>
+		{% endblock %}
 
-{% block bottom %}
-    {{ assets.js('bottom')|raw }}
-{% endblock %}
+		{% block body %}
+			<main id="page">
+				<div>
+					{% block content %}{% endblock %}
+				</div>
+			</main>
+		{% endblock %}
 
-</body>
+		{% block footer %}
+			<div class="footer text-center"></div>
+		{% endblock %}
+
+	</body>
 </html>
