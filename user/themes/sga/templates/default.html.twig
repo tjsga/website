@@ -1,5 +1,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+	{% if page.header.header_image is defined %}
+		{% set hero_image = page.media[page.header.header_image] %}
+		<div class="hero">
+			{{ hero_image.sizes('100vw').html()|raw }}
+		</div>
+	{% endif %}
+	{# All templates support modules by default #}
+	{% for module in page.collection() %}
+		{{ module.content|raw }}
+	{% endfor %}
 	{{ page.content }}
 {% endblock %}
