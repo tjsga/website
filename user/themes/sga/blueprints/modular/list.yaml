@@ -1,0 +1,27 @@
+title: List
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Items
+          fields:
+            header.items:
+              name: Items
+              type: list
+              label: Items
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .text:
+                  type: editor
+                  label: Text
+                .url:
+                  type: text
+                  label: Link
