@@ -1,6 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
+	<h1 class="text-center text-4xl font-bold">
+		{{ page.title }}
+	</h1>
+	<div class="markdown">
+		{{ page.content }}
+	</div>
 	{% if page.header.header_image is defined %}
 		{% set hero_image = page.media[page.header.header_image] %}
 		<div class="hero relative">
@@ -18,12 +24,11 @@
 	{% else %}
 		{% for article in page.collection %}
 			<div>
-				<a href="{{article.url}}">
+				<a href="{{article.url}}" class="text-xl">
 					<h2>{{ article.title|raw }}</h2>
 				</a>
 				<p>{{ article.summary|raw }}</p>
 			</div>
 		{% endfor %}
 	{% endif %}
-	{{ page.content }}
 {% endblock %}

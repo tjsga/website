@@ -8,6 +8,16 @@ body {
 
 /* Typography */
 
+.markdown h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.markdown h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

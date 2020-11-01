@@ -9,5 +9,3 @@ content:
   pagination: true
   url_taxonomy_filters: true
 ---
-
-# SGA News
