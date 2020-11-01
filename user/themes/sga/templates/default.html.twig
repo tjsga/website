@@ -11,8 +11,19 @@
 		</div>
 	{% endif %}
 	{# All templates support modules by default #}
-	{% for module in page.collection() %}
-		{{ module.content|raw }}
-	{% endfor %}
+	{% if page.header.content.items == '@self.modular' %}
+		{% for module in page.collection %}
+			{{ module.content|raw }}
+		{% endfor %}
+	{% else %}
+		{% for article in page.collection %}
+			<div>
+				<a href="{{article.url}}">
+					<h2>{{ article.title|raw }}</h2>
+				</a>
+				<p>{{ article.summary|raw }}</p>
+			</div>
+		{% endfor %}
+	{% endif %}
 	{{ page.content }}
 {% endblock %}
