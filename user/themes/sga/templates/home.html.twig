@@ -7,14 +7,32 @@
 	<section class="container mx-auto md:w-2/3 markdown-body text-lg leading-7">
 		{{ page.content }}
 	</section>
+
+	{# Hero section #}
 	{% if page.header.header_image is defined %}
 		{% set hero_image = page.media[page.header.header_image] %}
 		{% include 'partials/hero.html.twig' with {"hero_image": hero_image} %}
 	{% endif %}
-	{# All templates support modules by default #}
-	<section class="container mx-auto px-8 my-8">
-		{% for module in page.collection() %}
-			{{ module.content|raw }}
-		{% endfor %}
+
+	<section>
+		{# Show segment #}
+		{% include "partials/segment.html.twig" %}
+
+		<hr/>
+
+		{# Show list of news articles #}
+		<div>
+			{% include
+				'article_list.html.twig'
+				with {"page": pages.find('/news')}
+			%}
+		</div>
+
+		{# Show list of initiatives #}
+		<div>
+			{% for module in pages.find('/projects').collection %}
+				{{ module.content|raw }}
+			{% endfor %}
+		</div>
 	</section>
 {% endblock %}

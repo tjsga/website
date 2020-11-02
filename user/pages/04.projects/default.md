@@ -8,4 +8,3 @@ content:
         by: ''
         dir: ''
 ---
-

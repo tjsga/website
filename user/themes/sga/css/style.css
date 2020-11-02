@@ -6,6 +6,35 @@ body {
   overflow-x: hidden;
 }
 
+.segment {
+  text-align: center;
+  display: flex;
+  margin: 20px auto;
+}
+
+.segment-item {
+  flex: 1;
+  padding: 25px;
+}
+
+.segment-item img {
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.segment-item p {
+  text-align: left;
+  font-weight: 100;
+  font-size: 1.25rem;
+}
+
+.segment-header {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(51, 122, 255);
+}
+
 /* Typography */
 
 * {
