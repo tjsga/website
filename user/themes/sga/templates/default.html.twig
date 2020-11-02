@@ -4,9 +4,9 @@
 	<h1 class="text-center text-4xl font-bold">
 		{{ page.title }}
 	</h1>
-	<div class="markdown">
+	<section class="container mx-auto md:w-2/3 markdown-body text-lg leading-7">
 		{{ page.content }}
-	</div>
+	</section>
 	{% if page.header.header_image is defined %}
 		{% set hero_image = page.media[page.header.header_image] %}
 		<div class="hero relative">
