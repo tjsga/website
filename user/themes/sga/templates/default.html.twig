@@ -1,10 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<h1 class="text-center text-4xl font-bold">
-		{{ page.title }}
-	</h1>
-	<section class="container mx-auto md:w-2/3 markdown-body text-lg leading-7">
+	<section class="container mx-auto md:w-2/3 markdown text-lg leading-7">
 		{{ page.content }}
 	</section>
 	{% if page.header.header_image is defined %}

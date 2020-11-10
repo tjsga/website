@@ -1,0 +1,31 @@
+title: Home
+"@extends":
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.initiatives:
+              type: list
+              label: Initiatives
+              min: 3
+              max: 3
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .text:
+                  type: editor
+                  label: Text
+                  codemirror:
+                    mode: "text"
+                .image:
+                  type: pagemediaselect
+                  label: Image

@@ -1,9 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<div class="markdown">
-		<h1>{{ page.title }}</h1>
+	<h1>{{ page.title }}</h1>
+	<section class="container mx-auto md:w-2/3 markdown text-lg leading-7">
 		{{ page.content }}
-	</div>
+	</section>
 	<a href="/news" class="text-lg font-bold text-blue-500">Go back</a>
 {% endblock %}

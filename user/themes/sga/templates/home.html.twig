@@ -1,9 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<h1 class="text-center text-4xl font-bold">
-		{{ page.title }}
-	</h1>
 	<section class="container mx-auto md:w-2/3 markdown-body text-lg leading-7">
 		{{ page.content }}
 	</section>
@@ -14,25 +11,19 @@
 		{% include 'partials/hero.html.twig' with {"hero_image": hero_image} %}
 	{% endif %}
 
-	<section>
-		{# Show segment #}
-		{% include "partials/segment.html.twig" %}
-
-		<hr/>
-
-		{# Show list of news articles #}
-		<div>
-			{% include
-				'article_list.html.twig'
-				with {"page": pages.find('/news')}
-			%}
-		</div>
-
-		{# Show list of initiatives #}
-		{# <div>
-			{% for module in pages.find('/projects').collection %}
-				{{ module.content|raw }}
-			{% endfor %}
-		</div> #}
+	<section class="container mx-auto px-8 my-8 flex flex-wrap">
+		{% for initiative in page.header.initiatives %}
+			<div class="lg:w-1/3 w-full lg:px-4 mb-4">
+				<h3 class="text-center font-bold text-3xl text-secondary mb-6">{{initiative.title}}</h3>
+				<img class="mb-4" src="{{ initiative.image }}">
+				<p class="w-full text-lg leading-8">{{ initiative.text }}</p>
+			</div>
+		{% endfor %}
+	</section>
+	<section class=" container mx-auto px-8 my-8">
+		{% include
+			'partials/news.html.twig'
+			with {"pages": pages.find("/news").collection()}
+		%}
 	</section>
 {% endblock %}

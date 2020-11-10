@@ -1,0 +1,21 @@
+title: Article
+"@extends":
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.summary:
+              title: Summary
+              type: editor
+              codemirror:
+                mode: "text"
+              validate:
+                required: true

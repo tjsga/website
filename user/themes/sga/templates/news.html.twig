@@ -2,10 +2,10 @@
 
 {% block content %}
 	{% include 'partials/hero.html.twig' %}
-	{% for article in page.collection() %}
+	<section class="container mx-auto px-8 my-8">
 		{% include
-			'modular/article.html.twig'
-			with {"page": article}
+			'partials/news.html.twig'
+			with {"pages": page.collection()}
 		%}
-	{% endfor %}
+	</section>
 {% endblock %}
