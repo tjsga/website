@@ -58,70 +58,8 @@
 		{% endblock %}
 		<hr/>
 
-		<style>
-			.footer {
-				display: flex;
-			}
-
-			.footer-col {
-				flex: 1;
-				text-align: center;
-			}
-		</style>
-
-		<div class="footer">
-			<div class="footer-col">
-				<b>Student documents and links</b><br/>
-				<a href="https://ion.tjhsst.edu/">Ion</a><br/>
-				<a href="https://ion.tjhsst.edu/uploads/advocacy.pdf">
-					Student Advocacy Guidelines
-				</a><br/>
-				<a href="https://www.tjtoday.org/">
-					TJToday
-				</a><br/>
-				<a href="http://youtube.com/tjtoday">
-					TJTV News
-				</a><br/>
-				<a href="https://tjhsst.fcps.edu/student-services/college-and-career-center/">
-					College and Career Center
-				</a><br/>
-			</div>
-
-			<div class="footer-col">
-				<b>School resources</b><br/>
-
-				<a href="https://www.fcps.edu/sites/default/files/media/forms/SRR1718.pdf">
-					FCPS Student Rights & Responsibilities
-				</a><br/>
-
-				<a href="https://pre-fcps.tjhsst.edu/">
-					Student-Run TJHSST Website
-				</a><br/>
-
-				<a href="https://tjhsst.fcps.edu/sites/default/files/media/inline-files/TJProfile1819.pdf">
-					TJHSST School Profile
-				</a><br/>
-
-				<a href="https://www.tjptsa.org/">
-					TJ PTSA
-				</a><br/>
-
-				<a href="https://www.tjpartnershipfund.org/">
-					TJ Partnership Fund
-				</a><br/>
-
-				<a href="https://integrity.tjhsst.edu/">
-					Academic Integrity
-				</a><br/>
-
-				<a href="https://tjhsst.fcps.edu/staff-directory/">
-					Staff Directory
-				</a><br/>
-			</div>
-
-			<div class="footer-col">
-				<b>Student documents and links</b>
-			</div>
-		</div>
+		<footer>
+			{{ pages.find("/_footer").content }}
+		</footer>
 	</body>
 </html>

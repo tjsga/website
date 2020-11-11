@@ -1,0 +1,43 @@
+title: Footer
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.image:
+              type: file
+              label: Image
+              destination: "user/themes/sga/images/footer"
+              accept:
+                - image/*
+            header.columns:
+              type: list
+              min: 2
+              max: 2
+              label: Columns
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .items:
+                  type: list
+                  label: Items
+                  fields:
+                    .title:
+                      type: text
+                      label: Title
+                    .url:
+                      type: text
+                      label: Link
+            header.credits:
+              type: editor
+              label: Credits
+              codemirror:
+                mode: text

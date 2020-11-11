@@ -16,6 +16,6 @@ form:
               title: Summary
               type: editor
               codemirror:
-                mode: "text"
+                mode: text
               validate:
                 required: true
