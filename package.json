@@ -1,0 +1,17 @@
+{
+  "name": "website",
+  "version": "2.0.0",
+  "description": "Official website of TJHSST SGA",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjsga/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tjsga/website/issues"
+  },
+  "homepage": "https://github.com/tjsga/website#readme",
+  "devDependencies": {
+    "prettier": "2.0.5",
+    "prettier-plugin-twig-melody": "^0.4.6"
+  }
+}

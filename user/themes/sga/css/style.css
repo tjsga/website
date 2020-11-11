@@ -1,89 +1,89 @@
 html,
 body {
-  font-family: "Inria Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
-  height: 100%;
-  overflow-x: hidden;
+	font-family: "Inria Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
+	height: 100%;
+	overflow-x: hidden;
 }
 
 .segment {
-  text-align: center;
-  display: flex;
-  margin: 20px auto;
+	text-align: center;
+	display: flex;
+	margin: 20px auto;
 }
 
 .segment-item {
-  flex: 1;
-  padding: 25px;
+	flex: 1;
+	padding: 25px;
 }
 
 .segment-item img {
-  border-radius: 5px;
-  margin: 10px auto;
+	border-radius: 5px;
+	margin: 10px auto;
 }
 
 .segment-item p {
-  text-align: left;
-  font-weight: 100;
-  font-size: 1.25rem;
+	text-align: left;
+	font-weight: 100;
+	font-size: 1.25rem;
 }
 
 .segment-header {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: rgb(51, 122, 255);
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: rgb(51, 122, 255);
 }
 
 /* Typography */
 
 * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .hero,
 .hero > img {
-  width: 100%;
-  height: 500px;
+	width: 100%;
+	height: 500px;
 }
 .hero > img {
-  object-fit: cover;
+	object-fit: cover;
 }
 .hero h1 {
-  text-shadow: 1px 1px 4px #444444;
-  font-size: 4em;
+	text-shadow: 1px 1px 4px #444444;
+	font-size: 4em;
 }
 
 /* Colors */
 
 .text-primary {
-  color: #38a3bd;
+	color: #38a3bd;
 }
 .text-dark {
-  color: #444444;
+	color: #444444;
 }
 .text-light {
-  color: #fffffa;
+	color: #fffffa;
 }
 .text-secondary {
-  color: #2d4756;
+	color: #2d4756;
 }
 .text-highlight {
-  color: #e27396;
+	color: #e27396;
 }
 .bg-primary {
-  background-color: #38a3bd;
+	background-color: #38a3bd;
 }
 .bg-dark {
-  background-color: #444444;
+	background-color: #444444;
 }
 .bg-light {
-  background-color: #fffffa;
+	background-color: #fffffa;
 }
 .bg-secondary {
-  background-color: #2d4756;
+	background-color: #2d4756;
 }
 .bg-highlight {
-  background-color: #e27396;
+	background-color: #e27396;
 }

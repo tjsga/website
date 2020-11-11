@@ -6,7 +6,9 @@
 	</section>
 	{% if page.header.header_image is defined %}
 		{% set hero_image = page.media[page.header.header_image] %}
-		{% include 'partials/hero.html.twig' with {"hero_image": hero_image} %}
+		{% include 'partials/hero.html.twig' with {
+			hero_image: hero_image
+		} %}
 	{% endif %}
 	{# All templates support modules by default #}
 	<section class="container mx-auto px-8 my-8">

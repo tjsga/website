@@ -1,23 +1,24 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<html lang="{{ grav.language.getActive ? : grav.config.site.default_lang }}">
 	<head>
 		{% block head %}
-			<meta charset="utf-8"/>
+			<meta charset="utf-8" />
 			<title>
 				{% if header.title %}
 					{{ header.title|e('html') }}
 					|
 				{% endif %}
-				{{ site.title|e('html') }}</title>
+				{{ site.title|e('html') }}
+			</title>
 
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			{% include 'partials/metadata.html.twig' %}
 
-			<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}"/>
-			<link rel="canonical" href="{{ page.url(true, true) }}"/>
-		{% endblock head %}
+			<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+			<link rel="canonical" href="{{ page.url(true, true) }}" />
+		{% endblock %}
 
 		{% block stylesheets %}
 			{% do assets.addCss('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css', 98) %}
@@ -31,8 +32,8 @@
 		{% endblock %}
 
 		{% block assets deferred %}
-			{{ assets.css()|raw }}
-			{{ assets.js()|raw }}
+		{{ assets.css()|raw }}
+		{{ assets.js()|raw }}
 		{% endblock %}
 	</head>
 
@@ -52,14 +53,15 @@
 		{% block body %}
 			<main id="page">
 				<div>
-					{% block content %}{% endblock %}
+					{% block content %}
+					{% endblock %}
 				</div>
 			</main>
 		{% endblock %}
-		<hr/>
+		<hr />
 
 		<footer>
-			{{ pages.find("/_footer").content }}
+			{{ pages.find('/_footer').content }}
 		</footer>
 	</body>
 </html>

@@ -6,10 +6,10 @@
 
 	{# Hero section #}
 	{% if page.header.header_image is defined %}
-		{% set
-hero_image = page.media[page.header.header_image] %}
-		{% include
-'partials/hero.html.twig' with {"hero_image": hero_image} %}
+		{% set hero_image = page.media[page.header.header_image] %}
+		{% include 'partials/hero.html.twig' with {
+			hero_image: hero_image
+		} %}
 	{% endif %}
 
 	<section class="container mx-auto px-8 my-8 flex flex-wrap">
@@ -18,13 +18,16 @@ hero_image = page.media[page.header.header_image] %}
 				<h3 class="text-center font-bold text-3xl text-secondary mb-6">
 					{{ initiative.title }}
 				</h3>
-				<img class="mb-4" src="{{ initiative.image }}"/>
-				<p class="w-full text-lg leading-8">{{ initiative.text }}</p>
+				<img class="mb-4" src="{{ initiative.image }}" />
+				<p class="w-full text-lg leading-8">
+					{{ initiative.text }}
+				</p>
 			</div>
 		{% endfor %}
 	</section>
 	<section class="container mx-auto px-8 my-8">
-		{% include 'partials/news.html.twig' with {"pages":
-  pages.find("/news").collection()|slice(1,3)} %}
+		{% include 'partials/news.html.twig' with {
+			pages: pages.find('/news').collection()|slice(1, 3)
+		} %}
 	</section>
 {% endblock %}
