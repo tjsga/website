@@ -11,7 +11,7 @@
 		</div>
 		<nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
 			{% for page in pages.children.visible %}
-				{% if theme_config.dropdown.enabled and page.children.visible.count > 0 %}
+				{% if theme_config.dropdown.enabled and page.children.visible.count > 0 and page.title != "News" %}
 					<div @click.away="open = false" class="relative" x-data="{ open: false }">
 						<button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold {{ (page.active or page.activeChild) ? 'bg-gray-300' : 'bg-transparent' }} text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
 							<span>{{ page.menu }}</span>

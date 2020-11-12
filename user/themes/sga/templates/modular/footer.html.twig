@@ -1,5 +1,5 @@
 <section class="container mx-auto px-8 my-8">
-	<img class="w-full mb-8" src="{{ header.image|first.path }}" />
+	<img class="w-full mb-8" src="/{{ header.image|first.path }}" />
 	<div class="flex flex-wrap text-center">
 		{% for column in header.columns %}
 			<div class="md:w-1/3 w-full">
@@ -15,7 +15,7 @@
 		{% endfor %}
 		<div class="md:w-1/3 w-full text-center">
 			<p class="markdown leading-7 mb-4">
-				{{ header.credits }}
+				{{ header.credits|markdown }}
 			</p>
 			<p class="leading-7 mb-4">
 				Website developed by

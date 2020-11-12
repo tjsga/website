@@ -13,7 +13,7 @@ form:
         content:
           fields:
             header.summary:
-              title: Summary
+              label: Summary
               type: editor
               codemirror:
                 mode: text

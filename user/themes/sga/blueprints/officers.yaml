@@ -1,0 +1,34 @@
+title: Article
+"@extends":
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.items:
+              name: Items
+              type: list
+              label: Items
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .subtitle:
+                  type: text
+                  label: Subtitle
+                .text:
+                  type: editor
+                  label: Text
+                .url:
+                  type: text
+                  label: Link
+                .image:
+                  type: pagemediaselect
+                  label: Image
