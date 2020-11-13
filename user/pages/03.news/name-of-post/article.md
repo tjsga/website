@@ -1,9 +1,8 @@
 ---
-title: 'Name of Post'
+title: "Name of Post"
 media_order: council.jpg
 header_image: council.jpg
-summary: 'Summary here (appears on home and news page list).'
-visible: true
+summary: "Summary here (appears on home and news page list)."
 ---
 
 Actual post goes here.

@@ -1,8 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{% include 'partials/hero.html.twig' %}
-	<section class="container mx-auto px-8 my-8">
+	{% if page.header.header_image is defined %}
+		{% set hero_image = page.media[page.header.header_image] %}
+		{% include 'partials/hero.html.twig' with {
+			hero_image: hero_image
+		} %}
+	{% endif %}
+	<section class="container mx-auto px-8 my-10">
 		{% include 'partials/news.html.twig' with {
 			pages: page.collection()
 		} %}

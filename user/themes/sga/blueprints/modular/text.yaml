@@ -1,0 +1,18 @@
+title: Footer
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.content:
+              type: editor
+              label: Content
+              validate:
+                required: true
