@@ -7,9 +7,13 @@
 	{# Hero section #}
 	{% if page.header.header_image is defined %}
 		{% set hero_image = page.media[page.header.header_image] %}
-		{% include 'partials/hero.html.twig' with {
-			hero_image: hero_image
-		} %}
+		<div class="hero relative">
+			<h1 class="absolute top-0 left-0 h-full w-full flex flex-col items-center justify-center text-white font-bold">
+				<span class="block text-4xl">Thomas Jefferson High School for Science and Techonology</span>
+				<span class="block">Student Government Association</span>
+			</h1>
+			{{ hero_image.quality(90).contrast(10).html()|raw }}
+		</div>
 	{% endif %}
 
 	<section class="container mx-auto px-8 my-8 flex flex-wrap">
