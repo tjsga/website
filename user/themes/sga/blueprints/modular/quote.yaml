@@ -1,0 +1,21 @@
+title: List
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.text:
+              type: editor
+              label: Text
+              codemirror:
+                mode: text
+            header.credit:
+              type: text
+              label: Credit

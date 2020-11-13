@@ -11,9 +11,7 @@
 		} %}
 	{% endif %}
 	{# All templates support modules by default #}
-	<section class="container mx-auto px-8 my-8">
-		{% for module in page.collection() %}
-			{{ module.content|raw }}
-		{% endfor %}
-	</section>
+	{% for module in page.collection() %}
+		{{ module.content|raw }}
+	{% endfor %}
 {% endblock %}
