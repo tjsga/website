@@ -10,8 +10,11 @@
 			hero_image: hero_image
 		} %}
 	{% endif %}
-	{# All templates support modules by default #}
-	{% for module in page.collection() %}
+	{% for module in page.collection({
+		items: {
+			'@self.modular': ''
+		}
+	}) %}
 		{{ module.content|raw }}
 	{% endfor %}
 {% endblock %}

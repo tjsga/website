@@ -1,0 +1,37 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	{% if page.header.header_image is defined %}
+		{% set hero_image = page.media[page.header.header_image] %}
+		{% include 'partials/hero.html.twig' with {
+			hero_image: hero_image
+		} %}
+	{% endif %}
+	<section class="container mx-auto px-8 py-4">
+		<h2 class="text-3xl font-bold my-4">
+			Calendar
+		</h2>
+		<iframe src="https://calendar.google.com/calendar/embed?src=mbftfg4hu7i8ueqrgcb5o7hc6k%40group.calendar.google.com&amp;ctz=America%2FNew_York"
+			style="border: 0"
+			scrolling="no"
+			height="600"
+			frameborder="0"
+			class="mx-auto w-full"></iframe>
+	</section>
+	<section class="container mx-auto px-8 py-8">
+		<p class="mb-2">
+			Interested in getting involved with SGA? You can run for office, work on a project, or apply to a committee. If
+			you just want to share an idea or concern or get to know your representatives, reach out to us at sga@tjhsst.edu!
+		</p>
+		<p class="font-secondary font-bold text-lg">
+			Below are some ways to connect with SGA.
+		</p>
+	</section>
+	{% for module in page.collection({
+		items: {
+			'@self.modular': ''
+		}
+	}) %}
+		{{ module.content|raw }}
+	{% endfor %}
+{% endblock %}
