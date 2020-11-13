@@ -87,3 +87,8 @@ body {
 .bg-highlight {
 	background-color: #e27396;
 }
+
+.news-paragraphs {
+	font-size: 22px;
+	line-height: 33px;
+}

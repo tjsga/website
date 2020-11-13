@@ -1,11 +1,26 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<h1>
-		{{ page.title }}
-	</h1>
-	<section class="container mx-auto md:w-2/3 markdown text-lg leading-7">
-		{{ page.content }}
+	{# Hero section #}
+	{% if page.header.header_image is defined %}
+		{% set hero_image = pages.find('/images').media['hero.png'] %}
+		{% include 'partials/hero.html.twig' with {
+			hero_image: hero_image
+		} %}
+	{% endif %}
+
+	<section class="container mx-auto md:w-2/3 text-lg leading-7">
+		{# Article headers #}
+		<h1 class="text-4xl my-10 text-center font-bold">
+			{{ page.title }}
+		</h1>
+		<img style="width: 600px; margin: 10px auto;" src="{{ page.media[page.header.header_image].url|e }}">
+		<hr/>
+
+		{# Actual article content goes here #}
+		<div class="markdown news-paragraphs">
+			{{ page.content }}
+		</div>
+		<a href="/news" class="text-lg font-bold text-blue-500">Go back</a>
 	</section>
-	<a href="/news" class="text-lg font-bold text-blue-500">Go back</a>
 {% endblock %}

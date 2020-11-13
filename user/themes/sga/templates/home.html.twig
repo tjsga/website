@@ -6,7 +6,7 @@
 
 	{# Hero section #}
 	{% if page.header.header_image is defined %}
-		{% set hero_image = page.media[page.header.header_image] %}
+		{% set hero_image = pages.find('/images').media['hero.png'] %}
 		{% include 'partials/hero.html.twig' with {
 			hero_image: hero_image
 		} %}
