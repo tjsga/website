@@ -25,6 +25,15 @@
 			</div>
 		{% endfor %}
 	</section>
+	{% if page.header.mission %}
+		<section class="text-center bg-dark text-light">
+			<div class="container mx-auto px-8 py-8">
+				<p class="text-3xl leading-relaxed font-serif">
+					{{ page.header.mission }}
+				</p>
+			</div>
+		</section>
+	{% endif %}
 	<section class="container mx-auto px-8 my-8">
 		{% include 'partials/news.html.twig' with {
 			pages: pages.find('/news').collection()|slice(0, 3)

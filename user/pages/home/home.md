@@ -15,6 +15,7 @@ initiatives:
         title: 'Get Involved'
         text: ' Any questions or concerns? Have an idea for how SGA could be doing more to advocate for students? Want to get involved? Contact Us! '
         image: segment-3.jpg
+mission: 'We envision a school where the brightest minds can come together to research, create, and explore, stretching beyond the limits of the classroom in expressing diverse cultures, fostering a sense of community, and creating social impact.'
 icon_image: hero.png
 ---
 

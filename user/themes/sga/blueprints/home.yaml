@@ -29,3 +29,8 @@ form:
                 .image:
                   type: pagemediaselect
                   label: Image
+            header.mission:
+              type: editor
+              label: Mission
+              codemirror:
+                mode: text
