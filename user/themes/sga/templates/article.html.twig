@@ -3,7 +3,7 @@
 {% block content %}
 	<section class="container mx-auto px-8 my-8 text-center">
 		{% if page.header.header_image %}
-			<img src="{{ page.media[page.header.header_image].cropZoom(1000, 300).url() }}" class="mb-4" />
+			<img src="{{ page.media[page.header.header_image].cropZoom(1000, 300).url() }}" class="mb-4 mx-auto" />
 		{% endif %}
 		{% if page.header.publish_date %}
 			<p class="opacity-75 text-lg mb-2">
