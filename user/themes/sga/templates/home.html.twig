@@ -34,7 +34,7 @@
 			</div>
 		</section>
 	{% endif %}
-	<section class="container mx-auto px-8 my-8">
+	<section class="container mx-auto px-8 my-10">
 		{% include 'partials/news.html.twig' with {
 			pages: pages.find('/news').collection()|slice(0, 3)
 		} %}

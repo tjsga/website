@@ -1,11 +1,21 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<h1>
-		{{ page.title }}
-	</h1>
-	<section class="container mx-auto md:w-2/3 markdown text-lg leading-7">
+	<section class="container mx-auto px-8 my-8 text-center">
+		{% if page.header.header_image %}
+			<img src="{{ page.media[page.header.header_image].cropZoom(1000, 300).url() }}" class="mb-4" />
+		{% endif %}
+		{% if page.header.date %}
+			<p class="opacity-75 text-lg mb-2">
+				Published <span class="font-bold">{{ page.header.date|nicetime }}</span>
+			</p>
+		{% endif %}
+		<h1 class="text-3xl font-serif">
+			{{ page.title }}
+		</h1>
+	</section>
+	<hr class="my-6 container mx-auto" />
+	<section class="container mx-auto md:w-2/3 markdown text-lg leading-7 px-8 my-8">
 		{{ page.content }}
 	</section>
-	<a href="/news" class="text-lg font-bold text-blue-500">Go back</a>
 {% endblock %}

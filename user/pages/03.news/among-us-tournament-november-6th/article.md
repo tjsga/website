@@ -1,5 +1,8 @@
 ---
 title: 'Among Us Tournament November 6th'
+media_order: game.jpg
+header_image: game.jpg
+date: '11/03/2020 12:00 am'
 summary: 'Join us for an Among Us tournament on November 6th! Is Sean the impostor?'
 ---
 
