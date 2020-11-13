@@ -6,7 +6,7 @@
 
 	{# Hero section #}
 	{% if page.header.header_image is defined %}
-		{% set hero_image = page.media[page.header.header_image] %}
+		{% set hero_image = pages.find('/images').media['hero.png'] %}
 		<div class="hero relative">
 			<h1 class="absolute top-0 left-0 h-full w-full flex flex-col items-center justify-center text-white font-bold">
 				<span class="block text-4xl">Thomas Jefferson High School for Science and Techonology</span>
