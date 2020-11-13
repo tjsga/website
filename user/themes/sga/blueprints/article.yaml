@@ -12,9 +12,6 @@ form:
       fields:
         content:
           fields:
-            header.date:
-              type: date
-              label: Date
             header.summary:
               label: Summary
               type: editor

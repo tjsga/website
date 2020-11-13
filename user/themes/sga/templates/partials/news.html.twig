@@ -5,9 +5,9 @@
 			{% if page.header.header_image %}
 				<img src="{{ page.media[page.header.header_image].resize(300).url() }}" class="mb-4" />
 			{% endif %}
-			{% if page.header.date %}
+			{% if page.header.publish_date %}
 				<p class="opacity-75 text-lg mb-2">
-					Published <span class="font-bold">{{ page.header.date|nicetime }}</span>
+					Published <span class="font-bold">{{ page.header.publish_date|nicetime }}</span>
 				</p>
 			{% endif %}
 			<h3 class="text-2xl font-bold text-primary">
@@ -19,8 +19,13 @@
 			</h3>
 		</div>
 		{# Content #}
-		<div class="md:w-2/3 w-full text-lg leading-8">
-			{{ page.header.summary }}
+		<div class="md:w-2/3 w-full">
+			<div class="text-lg leading-8">
+				{{ page.header.summary }}
+			</div>
+			{% if page.url %}
+				<a class="mt-4 p-2 inline-block bg-primary text-light rounded" href="{{ page.url }}">Read More</a>
+			{% endif %}
 		</div>
 	</div>
 	{% if not loop.last %}

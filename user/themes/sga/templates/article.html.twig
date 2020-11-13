@@ -5,9 +5,9 @@
 		{% if page.header.header_image %}
 			<img src="{{ page.media[page.header.header_image].cropZoom(1000, 300).url() }}" class="mb-4" />
 		{% endif %}
-		{% if page.header.date %}
+		{% if page.header.publish_date %}
 			<p class="opacity-75 text-lg mb-2">
-				Published <span class="font-bold">{{ page.header.date|nicetime }}</span>
+				Published <span class="font-bold">{{ page.header.publish_date|nicetime }}</span>
 			</p>
 		{% endif %}
 		<h1 class="text-3xl font-serif">
